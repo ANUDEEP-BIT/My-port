@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anudeep Reddy | UI/UX Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#ec4899',   // pink highlight
+            dark: '#0f172a'
+          },
+          fontFamily: {
+            display: ['Lato', 'system-ui', 'sans-serif'],
+            body: ['Commissioner', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts (optional, for nicer typography) -->
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;600&family=Lato:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Meta -->
+  <meta name="description" content="UI/UX & Frontend portfolio of Anudeep Reddy – accessible, user-centered web experiences." />
+
+  <!-- Simple loader + subtle custom styles -->
+  <style>
+    body {
+      font-family: theme('fontFamily.body', system-ui, sans-serif);
+    }
+    .loader-screen {
+      position: fixed;
+      inset: 0;
+      background: #f9a8d4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      animation: fadeOut 1.6s ease 1.2s forwards;
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 leading-relaxed">
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="loader-screen">
+    <h1 class="text-4xl md:text-6xl font-black tracking-wide uppercase">
+      Anudeep <span class="text-primary">Reddy</span>
+    </h1>
+  </div>
+
+  <!-- ================= HEADER ================= -->
+  <header class="sticky top-0 bg-white/90 backdrop-blur shadow z-40">
+    <nav class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <a href="#hero" class="text-lg sm:text-xl font-black tracking-wide uppercase">
+        <span class="text-slate-900">Anudeep</span> <span class="text-primary">Reddy</span>
+      </a>
+      <ul class="hidden sm:flex gap-6 text-sm font-medium">
+        <li><a href="#about" class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">About</a></li>
+        <li><a href="#skills" class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Skills</a></li>
+        <li><a href="#projects" class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Projects</a></li>
+        <li><a href="#contact" class="hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded">Contact</a></li>
+      </ul>
+      <a href="mailto:anudeepreddy705@gmail.com"
+         class="hidden sm:inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-slate-900 text-white hover:bg-primary focus:ring-2 focus:ring-primary focus:ring-offset-2">
+        Hire Me
+      </a>
+    </nav>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-4">
+        UI / UX Portfolio
+      </p>
+      <h2 class="text-4xl md:text-5xl font-black mb-6 leading-tight font-display uppercase">
+        UI/UX Developer<br class="hidden sm:block" /> & Frontend Engineer
+      </h2>
+      <p class="text-slate-600 text-base md:text-lg mb-6">
+        My name is <span class="font-semibold text-slate-900">Anudeep Reddy</span> and I am a
+        UI/UX Developer. I started my journey in the world of computers at a young age.
+        I completed my <span class="font-semibold">B.Tech in Information Technology (JNTUH)</span>
+        and <span class="font-semibold">MS at Trine University</span>. Web development is my core
+        area of interest – I love the idea of one code base that can be deployed across platforms,
+        and I enjoy crafting interactive UI components that deliver better UX.
+      </p>
+      <p class="text-slate-600 text-base md:text-lg mb-8">
+        I focus on accessible, ADA/WCAG-compliant, user-centered interfaces using tools like Figma,
+        design systems, and modern frontend frameworks.
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#projects"
+           class="inline-flex items-center px-5 py-3 rounded-full bg-primary text-white text-sm font-semibold shadow hover:bg-pink-600 focus:ring-2 focus:ring-primary focus:ring-offset-2">
+          View Projects
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center px-5 py-3 rounded-full border border-slate-300 text-sm font-semibold hover:border-primary hover:text-primary focus:ring-2 focus:ring-primary focus:ring-offset-2">
+          Let’s Work Together
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <div class="absolute -top-6 -left-4 w-32 h-32 rounded-3xl bg-pink-200 blur-2xl opacity-80"></div>
+      <div class="absolute -bottom-10 -right-6 w-40 h-40 rounded-full bg-pink-300 blur-3xl opacity-80"></div>
+      <div class="relative bg-white rounded-3xl shadow-xl border border-pink-100 p-6 md:p-8">
+        <p class="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500 mb-4">
+          Profile
+        </p>
+        <h3 class="text-2xl font-bold mb-2">Anudeep Reddy</h3>
+        <p class="text-sm text-slate-600 mb-2">UI/UX Engineer & Frontend Developer</p>
+        <p class="text-sm text-slate-600 mb-4">
+          Email: <a href="mailto:anudeepreddy705@gmail.com" class="text-primary underline">anudeepreddy705@gmail.com</a><br />
+          Phone: <span class="tabular-nums">+1 248-854-5270</span>
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="inline-flex px-3 py-1 rounded-full bg-slate-100 text-xs font-medium">Figma</span>
+          <span class="inline-flex px-3 py-1 rounded-full bg-slate-100 text-xs font-medium">UI/UX</span>
+          <span class="inline-flex px-3 py-1 rounded-full bg-slate-100 text-xs font-medium">React</span>
+          <span class="inline-flex px-3 py-1 rounded-full bg-slate-100 text-xs font-medium">ADA / WCAG</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="bg-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">About Me</h3>
+        <p class="text-slate-600 mb-4">
+          I’m a <span class="font-semibold">UI/UX Engineer</span> with experience designing and
+          building enterprise and consumer-facing web applications. I work across the full
+          product lifecycle – from discovery and UX research through wireframes, high-fidelity
+          UI, and frontend implementation.
+        </p>
+        <p class="text-slate-600 mb-4">
+          My work is grounded in <span class="font-semibold">human-centered design</span> and
+          <span class="font-semibold">accessibility (ADA / WCAG)</span>. I focus on creating
+          interfaces that are intuitive, performant, and inclusive for all users,
+          especially in complex domains like healthcare and enterprise applications.
+        </p>
+        <p class="text-slate-600">
+          I love sharing designs, patterns, and reusable components, and I’m always refining
+          design systems, interaction states, and responsive behavior to make experiences feel
+          smooth and polished.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
+        <h4 class="text-lg font-semibold mb-3">Quick Snapshot</h4>
+        <dl class="space-y-2 text-sm text-slate-700">
+          <div class="flex justify-between">
+            <dt class="font-medium">Role</dt>
+            <dd>UI/UX Engineer & Frontend Developer</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="font-medium">Education</dt>
+            <dd class="text-right">
+              B.Tech – JNTUH<br />
+              MS – Trine University
+            </dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="font-medium">Core Focus</dt>
+            <dd class="text-right">Web UX, accessibility, enterprise UI</dd>
+          </div>
+          <div class="flex justify-between">
+            <dt class="font-medium">Location</dt>
+            <dd>USA</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h3 class="text-3xl font-bold mb-8">Skills</h3>
+
+      <!-- Design Skills -->
+      <div class="mb-10">
+        <h4 class="text-lg font-semibold mb-4">Design & UX</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">Figma</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">UI Design</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">UX Research</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">Wireframing</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">Prototyping</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">Design Systems</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">ADA / WCAG &amp; 508</div>
+          <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-4 text-center">Interaction Design</div>
+        </div>
+      </div>
+
+      <!-- Frontend Skills (from original index.html skills) -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Frontend & Implementation</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div class="bg-slate-900 text-white rounded-xl shadow p-4 text-center">HTML</div>
+          <div class="bg-slate-900 text-white rounded-xl shadow p-4 text-center">CSS</div>
+          <div class="bg-slate-900 text-white rounded-xl shadow p-4 text-center">JavaScript</div>
+          <div class="bg-slate-900 text-white rounded-xl shadow p-4 text-center">React</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE SUMMARY ================= -->
+  <section class="bg-white py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-3xl font-bold mb-4">Experience Overview</h3>
+        <p class="text-slate-600 mb-4">
+          As a Full Stack Intern at <span class="font-semibold">LS&amp;CG</span>, I supported
+          <span class="font-semibold">server setup and deployment</span>, handled
+          <span class="font-semibold">frontend UX</span>, implemented
+          <span class="font-semibold">server-side scripting</span>, and contributed to
+          <span class="font-semibold">database design and maintenance</span>.
+        </p>
+        <p class="text-slate-600">
+          Recent work focuses heavily on modernizing member and customer experiences within
+          enterprise environments, improving information architecture, flows, and visual design
+          while keeping accessibility and performance as core requirements.
+        </p>
+      </div>
+
+      <div class="bg-slate-50 rounded-2xl border border-slate-200 p-6">
+        <h4 class="text-lg font-semibold mb-3">Highlights</h4>
+        <ul class="space-y-2 text-sm text-slate-700 list-disc list-inside">
+          <li>Server setup &amp; deployment for web applications</li>
+          <li>Handled front-end UX and responsive UI implementation</li>
+          <li>Backend server-side scripting and integration</li>
+          <li>Database design and maintenance</li>
+          <li>Enterprise UX for healthcare &amp; member-facing portals</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="py-16 md:py-20 bg-slate-900 text-slate-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex items-baseline justify-between mb-8">
+        <h3 class="text-3xl font-bold">Projects</h3>
+        <span class="text-xs uppercase tracking-[0.25em] text-pink-200">Selected Work</span>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- SIMPL-POS -->
+        <article class="bg-slate-800/70 rounded-2xl border border-slate-700 p-6 flex flex-col">
+          <h4 class="text-xl font-semibold mb-2">SimplPOS – Retail POS Experience</h4>
+          <p class="text-sm text-slate-200 mb-3">
+            A point-of-sale dashboard for retail users in Farmington, Michigan, designed to
+            make day-to-day operations fast, clear, and mobile-friendly.
+          </p>
+          <ul class="text-xs text-slate-300 mb-4 list-disc list-inside space-y-1">
+            <li>Designed task-focused POS workflows for cashiers and managers.</li>
+            <li>Optimized key flows (checkout, refunds, daily close) for speed and clarity.</li>
+            <li>Responsive layout to support tablet and desktop usage.</li>
+          </ul>
+          <p class="mt-auto text-xs font-semibold text-pink-300">
+            Role: UI/UX • Dashboard UX • Interaction Design
+          </p>
+        </article>
+
+        <!-- BCBS Modernisation -->
+        <article class="bg-slate-800/70 rounded-2xl border border-slate-700 p-6 flex flex-col">
+          <h4 class="text-xl font-semibold mb-2">BCBS – Modernisation of Member Experience</h4>
+          <p class="text-sm text-slate-200 mb-3">
+            Modernized a healthcare member portal to simplify navigation, improve
+            accessibility, and support self-service for claims, benefits, and ID cards.
+          </p>
+          <ul class="text-xs text-slate-300 mb-4 list-disc list-inside space-y-1">
+            <li>Redesigned information architecture and key member journeys.</li>
+            <li>Applied ADA/WCAG guidelines for color contrast, keyboard access, and semantics.</li>
+            <li>Created responsive design system components for enterprise UI.</li>
+          </ul>
+          <p class="mt-auto text-xs font-semibold text-pink-300">
+            Role: UI/UX • Accessibility • Enterprise Design
+          </p>
+        </article>
+
+        <!-- Enterprise Web Applications -->
+        <article class="bg-slate-800/70 rounded-2xl border border-slate-700 p-6 flex flex-col">
+          <h4 class="text-xl font-semibold mb-2">Enterprise Web Applications – UI/UX Engineer</h4>
+          <p class="text-sm text-slate-200 mb-3">
+            Designed and supported enterprise web applications across multiple modules,
+            focusing on clean layouts, consistent components, and scalable patterns.
+          </p>
+          <ul class="text-xs text-slate-300 mb-4 list-disc list-inside space-y-1">
+            <li>Defined UI standards and reusable components for enterprise teams.</li>
+            <li>Collaborated with developers to implement pixel-perfect, accessible React UIs.</li>
+            <li>Improved usability with clear visual hierarchy and responsive behavior.</li>
+          </ul>
+          <p class="mt-auto text-xs font-semibold text-pink-300">
+            Role: UI/UX Engineer • Design Systems • Frontend Collaboration
+          </p>
+        </article>
+      </div>
+
+      <!-- Optional: link to GitHub / more work -->
+      <div class="mt-10 text-center">
+        <a href="#contact"
+           class="inline-flex items-center px-5 py-3 rounded-full bg-primary text-white text-sm font-semibold shadow hover:bg-pink-600 focus:ring-2 focus:ring-pink-400 focus:ring-offset-2 focus:ring-offset-slate-900">
+          Discuss These Projects
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="py-16 md:py-20 text-center">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6">
+      <h3 class="text-3xl font-bold mb-4">Get In Touch</h3>
+      <p class="text-slate-600 mb-6">
+        If you like my work, have a project you want to start, or just want to say hi,
+        feel free to reach out. I’m open to UI/UX roles, frontend collaboration, and
+        freelance projects.
+      </p>
+      <a href="mailto:anudeepreddy705@gmail.com"
+         class="inline-flex items-center px-6 py-3 rounded-full bg-primary text-white font-semibold shadow hover:bg-pink-600 focus:ring-2 focus:ring-primary focus:ring-offset-2">
+        Message Me
+      </a>
+      <p class="mt-4 text-sm text-slate-500">
+        Email: <a href="mailto:anudeepreddy705@gmail.com" class="underline text-primary">anudeepreddy705@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-slate-900 text-slate-200 py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.25em] text-pink-300">
+          Anudeep Reddy
+        </p>
+        <p class="text-xs text-slate-400">
+          © 2026. All rights reserved. Designed with accessibility in mind.
+        </p>
+      </div>
+      <div class="flex gap-4 text-xs text-slate-400">
+        <a href="#hero" class="hover:text-pink-300">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
